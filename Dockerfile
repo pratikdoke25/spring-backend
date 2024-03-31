@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 
 FROM maven:3.8.3-openjdk-17-slim
 
-COPY --from=build /target/demo-0.0.1.jar jgame.jar
+COPY --from=build /target/jGame-0.0.1-SNAPSHOT.jar jGame.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "jgame.jar"]
+ENTRYPOINT ["java", "-jar", "jGame.jar"]
 
